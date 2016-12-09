@@ -1,7 +1,7 @@
 function weather() {
 
   var location = document.getElementById("location");
-  var apiKey = 'INSERT API KEY'; 
+  var apiKey = '9b5367b8deea14cf0b0cb28d8a549328';
   var url = 'https://api.forecast.io/forecast/';
 
   navigator.geolocation.getCurrentPosition(success, error);
@@ -10,7 +10,7 @@ function weather() {
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
 
-    location.innerHTML = 'Latitude is ' + latitude + '° Longitude is ' + longitude + '°';
+    location.innerHTML = 'Latitude is ' + latitude + '° <br> Longitude is ' + longitude + '°';
 
      $.getJSON(url + apiKey + "/" + latitude + "," + longitude + "?callback=?", function(data) {
       $('#temp').html(data.currently.temperature + '° F');
@@ -19,7 +19,7 @@ function weather() {
   }
 
   function error() {
-    location.innerHTML = "Unable to retrieve your location. Please refresh and try again.";
+    location.innerHTML = "Unable to retrieve your location";
   }
 
   location.innerHTML = "Locating...";
