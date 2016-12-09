@@ -8,7 +8,7 @@ body {
   margin: 0 auto;
   font-family: 'Roboto Slab', serif;
   text-align: center;
-  padding: 200px 80px;
+  padding: 50px 80px;
   color: #ffffff;
 } 
 
@@ -17,3 +17,9 @@ h1, h2 {
   font-size: 3em;
   
 }
+
+ #map {
+  height: 300px;
+  width: 50%;
+  margin: 40px auto;
+ }
